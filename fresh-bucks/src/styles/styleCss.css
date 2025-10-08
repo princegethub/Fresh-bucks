@@ -1,0 +1,19 @@
+.marquee-wrapper {
+    overflow: hidden;
+    position: relative;
+  }
+  
+  .marquee-track {
+    display: inline-block;
+    animation: marquee 100s linear infinite;
+    white-space: nowrap;
+  }
+  
+  @keyframes marquee {
+    0% {
+      transform: translateX(0%);
+    }
+    100% {
+      transform: translateX(-50%);
+    }
+  }

@@ -1,0 +1,52 @@
+.marquee-container {
+    overflow: hidden;
+    background-color: #ff6600; /* Orange stripe */
+    padding: 5px 0;
+    position: relative;
+  }
+  
+  .marquee {
+    white-space: nowrap;
+    display: flex;
+    align-items: center;
+  }
+  
+  .marquee-group {
+    display: flex;
+    animation: scroll-left 20s linear infinite;
+  }
+  
+  .marquee-item {
+    display: flex;
+    align-items: center;
+    margin: 0 20px;
+    color: white;
+    font-weight: bold;
+    font-size: 1.5rem;
+    font-weight: bold;
+    white-space: nowrap;
+  }
+
+  .marquee-item img {
+    height: 60px;
+    margin: 0 20px;
+  }
+  
+  @keyframes scroll-left {
+    0% { transform: translateX(0); }
+    100% { transform: translateX(-50%); }
+  }
+  
+  @keyframes spin {
+    from {
+      transform: rotate(0deg);
+    }
+    to {
+      transform: rotate(360deg);
+    }
+  }
+  
+  .animate-spin-slow {
+    animation: spin 10s linear infinite;
+    transform-origin: center; /* Ensures rotation happens around the center */
+  }

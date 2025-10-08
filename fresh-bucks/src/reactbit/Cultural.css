@@ -1,0 +1,59 @@
+.circular-gallery {
+    width: 100%;
+    height: 100%;
+    overflow: hidden;
+    cursor: grab;
+  }
+  
+  .circular-gallery:active {
+    cursor: grabbing;
+  }
+  
+  .card-spotlight {
+    position: relative;
+    border-radius: 1.5rem;
+    border: 1px solid oklch(52.7% 0.154 150.069); 
+    /* background: linear-gradient(135deg, #ffffff 30%, #fff7e0 100%); */
+    padding: 2rem;
+    overflow: hidden;
+    transition: all 0.4s ease-in-out;
+  }
+  
+  /* Spotlight Effect */
+  .card-spotlight::before {
+    content: "";
+    position: absolute;
+    width: 250px;
+    height: 250px;
+    /* background: radial-gradient(circle, rgba(255, 215, 0, 0.2) 10%, transparent 60%); */
+    transform: translate(-50%, -50%);
+    transition: all 0.2s ease-out;
+    pointer-events: none;
+    opacity: 0;
+  }
+  
+  /* Hover Effects */
+  .card-spotlight:hover {
+    transform: translateY(-5px);
+    /* box-shadow: 0 10px 25px rgba(218, 165, 32, 0.3);  */
+  }
+  
+  .card-spotlight:hover::before {
+    opacity: 1;
+  }
+  
+
+
+  
+  .card-spotlight:hover h2 {
+    color: white;
+  }
+  
+  .card-spotlight:hover p {
+    color: white ;
+
+  }
+  .card-spotlight:hover .icon {
+    color: oklch(52.7% 0.154 150.069);
+
+  }
